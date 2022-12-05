@@ -7,7 +7,7 @@
     "serve": "concurrently \"postcss ./tailwind.css -o public/styles.css --watch\"  \"live-server ./public \"",
     "dev": "cross-env NODE_ENV=dev postcss ./tailwind.css -o public/styles.css",
     "public": "cross-env NODE_ENV=public postcss ./tailwind.css -o public/styles.css",
-    "deploy": "npm run public; mkdir -p docs; cp public/index.html docs/index.html; cp public/styles.css docs/styles.css"
+    "deploy": "npm run public && cp public/index.html docs/index.html && cp public/styles.css docs/styles.css"
   },
   "dependencies": {
     "autoprefixer": "^9.5.1",
